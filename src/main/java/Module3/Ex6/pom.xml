@@ -15,7 +15,6 @@
     </properties>
 
     <profiles>
-
         <profile>
             <id>dev</id>
             <activation>
@@ -33,7 +32,6 @@
                 </resources>
             </build>
         </profile>
-
 
         <profile>
             <id>prod</id>
