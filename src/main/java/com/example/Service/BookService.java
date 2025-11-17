@@ -1,46 +1,111 @@
 package com.example.service;
 
+import com.example.domain.Author;
+import com.example.dto.BookResponseDto;
 import com.example.dto.CreateBookDto;
 import com.example.domain.Book;
 import com.example.exception.BookNotFoundException;
+import com.example.repository.AuthorRepository;
+import com.example.repository.BookRepository;
+import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class BookService {
 
 
-    private final Map<String, Book> bookStorage = new HashMap<>();
+    private final BookRepository bookRepository;
+    private final AuthorRepository authorRepository;
 
-    public BookService() {
-        bookStorage.put("1", new Book("The Great Gatsby", "F. Scott Fitzgerald", 1925));
-        bookStorage.put("2", new Book("1984", "George Orwell", 1949));
-        bookStorage.put("3", new Book("The Hobbit", "J.R.R. Tolkien", 1937));
+    @Autowired
+    public BookService(BookRepository bookRepository, AuthorRepository authorRepository) {
+        this.bookRepository = bookRepository;
+        this.authorRepository = authorRepository;
     }
 
     public Book createBookFromDto(CreateBookDto dto) {
         Book book = new Book();
         book.setTitle(dto.getTitle());
-        book.setAuthor(dto.getAuthor());
-        book.setYear(dto.getPublicationYear() != null ? dto.getPublicationYear() : 2024);
+        book.setYear(dto.getYear());
+
+        Author author = authorRepository.findByName(dto.getAuthor().getName())
+                .orElseGet(() -> {
+                    Author newAuthor = new Author(dto.getAuthor().getName());
+                    return authorRepository.save(newAuthor);
+                });
+        author.setName(dto.getAuthor().getName());
+        book.setAuthor(author);
         return book;
     }
 
-    public boolean deleteBook(String id) {
-        if (!bookStorage.containsKey(id)) {
-            throw new BookNotFoundException("Book with ID " + id + " not found");
-        }
-        bookStorage.remove(id);
-        return true;
+    public Book saveBook(Book book) {
+        return bookRepository.save(book);
     }
 
-    public Book findBookById(String id) {
-        Book book = bookStorage.get(id);
-        if (book == null) {
+    public void deleteBook(Long id) {
+        if (!bookRepository.existsById(id)) {
             throw new BookNotFoundException("Book with ID " + id + " not found");
         }
-        return book;
+        bookRepository.deleteById(id);
     }
+
+    public Book findBookById(Long id) {
+        return bookRepository.findById(id)
+                .orElseThrow(() -> new BookNotFoundException("Book with ID " + id + " not found"));
+    }
+
+    public List<Book> getAllBooks() {
+        return bookRepository.findAllWithAuthors();
+    }
+
+    public Book updateBook(Long id, CreateBookDto updateBookDto) {
+        Book existingBook = bookRepository.findById(id)
+                .orElseThrow(() -> new BookNotFoundException("Book with ID " + id + " not found"));
+
+        existingBook.setTitle(updateBookDto.getTitle());
+        existingBook.setAuthor(updateBookDto.getAuthor());
+        existingBook.setYear(updateBookDto.getYear());
+
+        return bookRepository.save(existingBook);
+    }
+
+    public List<Book> findBooksByAuthor(Author author) {
+        return bookRepository.findByAuthor(author);
+    }
+
+    public Book findBookByTitleAndAuthor(String title, Author author) {
+        return bookRepository.findByTitleAndAuthor(title, author)
+                .orElseThrow(() -> new BookNotFoundException(
+                        "Book with title '" + title + "' and author '" + author + "' not found"));
+    }
+
+    public List<BookResponseDto> searchBooksByTitle(String searchText) {
+        List<Book> books = bookRepository.findByTitleContainingIgnoreCaseOrderByYearDesc(searchText);
+        return books.stream()
+                .map(BookResponseDto::new)
+                .collect(Collectors.toList());
+    }
+
+    @Transactional
+    public Book createBookWithAuthorAndRollback(CreateBookDto dto) {
+        Author author = new Author();
+        author.setName(dto.getAuthor().getName());
+        Author savedAuthor = authorRepository.save(author);
+
+        throw new RuntimeException("Искусственная ошибка для демонстрации отката транзакции!");
+
+//         Book book = new Book();
+//         book.setTitle(dto.getTitle());
+//         book.setYear(dto.getYear());
+//         book.setAuthor(savedAuthor);
+//         return bookRepository.save(book);
+    }
+
 }

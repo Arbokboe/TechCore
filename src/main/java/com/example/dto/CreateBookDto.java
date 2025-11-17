@@ -1,5 +1,6 @@
 package com.example.dto;
 
+import com.example.domain.Author;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,8 +8,8 @@ import lombok.Setter;
 @Getter
 public class CreateBookDto {
     private String title;
-    private String author;
-    private Integer publicationYear;
+    private Author author;
+    private int year;
 
     public CreateBookDto() {
     }
