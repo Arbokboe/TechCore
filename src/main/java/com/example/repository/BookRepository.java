@@ -11,13 +11,13 @@ import java.util.Optional;
 
 public interface BookRepository extends JpaRepository<Book, Long> {
 
-    List<Book> findByAuthor(Author author);
+    List<Book> findByAuthor_Name(String author);
 
-    Optional<Book> findByTitleAndAuthor(String title, Author author);
+    Optional<Book> findByTitleAndAuthor_Name(String title, String author);
 
     @Query("SELECT b FROM Book b JOIN FETCH b.author")
     List<Book> findAllWithAuthors();
 
-    @Query("SELECT b FROM Book b JOIN FETCH b.author WHERE LOWER(b.title) LIKE LOWER(CONCAT('%', :searchText, '%')) ORDER BY b.year DESC")
-    List<Book> findByTitleContainingIgnoreCaseOrderByYearDesc(@Param("searchText") String searchText);
+    @Query("SELECT b FROM Book b JOIN FETCH b.author WHERE LOWER(b.title) LIKE LOWER(CONCAT('%', :searchText, '%')) ORDER BY b.public_year DESC")
+    List<Book> findByTitleContainingIgnoreCaseOrderByPublic_yearDesc(@Param("searchText") String searchText);
 }
