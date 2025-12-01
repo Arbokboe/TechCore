@@ -1,9 +1,8 @@
 package com.example.controller;
 
 import com.example.dto.NewsResponse;
-import com.example.service.NewsService.NewsService;
-import com.example.service.NewsService.WebClientService;
-import lombok.Data;
+import com.example.service.newsService.NewsService;
+import com.example.service.newsService.WebClientService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,4 +1,4 @@
-package com.example.service.NewsService;
+package com.example.service.newsService;
 
 import com.example.dto.NewsResponse;
 import lombok.Data;

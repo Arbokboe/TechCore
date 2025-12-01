@@ -5,7 +5,7 @@ import com.example.dto.bookDto.CreateBookDto;
 import com.example.domain.Book;
 import com.example.mapper.BookMapper;
 import com.example.service.AsyncService;
-import com.example.service.BookService.BookService;
+import com.example.service.bookService.BookService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

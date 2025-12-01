@@ -1,4 +1,4 @@
-package com.example.service.BookService;
+package com.example.service.bookService;
 
 import com.example.domain.Author;
 import com.example.dto.bookDto.BookResponseDto;
