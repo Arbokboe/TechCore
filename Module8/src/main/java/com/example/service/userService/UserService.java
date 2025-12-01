@@ -1,8 +1,9 @@
 package com.example.service.userService;
 
-import com.example.domain.User;
+import com.example.dto.RegisterRequest;
+import com.example.dto.UserDto;
 
 public interface UserService {
 
-    User register(User user);
+    UserDto register(RegisterRequest request);
 }

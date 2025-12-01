@@ -5,21 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54a9ce3a-7045-4d35-989f-eaf7a0ff6fbf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/domain/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/domain/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/CustomUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/userService/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/userService/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/dto/RegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44a89290-f854-4366-93cb-84f87e239d07.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/44a89290-f854-4366-93cb-84f87e239d07.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44a89290-f854-4366-93cb-84f87e239d07/storage_v2/_src_/database/Books.ijLWAw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/44a89290-f854-4366-93cb-84f87e239d07/storage_v2/_src_/database/Books.ijLWAw/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/controller/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/controller/NewsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/di/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/di/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/BookService/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/bookService/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/BookService/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/bookService/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/NewsService/NewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/newsService/NewsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/NewsService/WebClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/newsService/WebClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/mapper/BookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/mapper/BookMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/securityConfig/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/securityConfig/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/bookService/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/bookService/BookServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/userService/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/userService/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/userService/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/userService/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +45,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -102,6 +100,9 @@
     ]
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="module4.main" />
@@ -129,7 +130,7 @@
       <updated>1764586175824</updated>
       <workItem from="1764586177595" duration="189000" />
       <workItem from="1764586378377" duration="59000" />
-      <workItem from="1764586452582" duration="2115000" />
+      <workItem from="1764586452582" duration="4689000" />
     </task>
     <servers />
   </component>

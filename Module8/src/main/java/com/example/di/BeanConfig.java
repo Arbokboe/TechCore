@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
 
 @Configuration
-public class Config {
+public class BeanConfig {
 
     @Value("${news.api.url}")
     private String newsApiUrl;

@@ -19,49 +19,50 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 
-@RequiredArgsConstructor
 @RestController
+@RequestMapping("/api/book")
+@RequiredArgsConstructor
 public class BookController {
 
     private final BookService bookService;
     private final AsyncService asyncService;
     private final BookMapper bookMapper;
 
-    @GetMapping("/book/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<BookResponseDto> getBookById(@PathVariable Long id) {
         return ResponseEntity.ok(bookService.findBookById(id));
     }
 
-    @GetMapping("/book/all")
+    @GetMapping("/all")
     public List<BookResponseDto> getAllBooks() {
         return bookService.getAllBooks()
                 .stream()
-                .map(bookMapper::toResponseDto)
+                .map(bookMapper::toDto)
                 .collect(Collectors.toList());
     }
 
-    @PostMapping("/book")
+    @PostMapping("/new")
     public ResponseEntity<BookResponseDto> createBook(@Valid @RequestBody CreateBookDto createBookDto) {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(bookService.saveBook(createBookDto));
     }
 
-    @PutMapping("/book/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<BookResponseDto> updateBook(@PathVariable Long id, @RequestBody CreateBookDto updateBookDto) {
         return ResponseEntity.ok(bookService.updateBook(id, updateBookDto));
     }
 
-    @DeleteMapping("/book/{id}")
+    @DeleteMapping("/{id}")
     public void deleteBook(@PathVariable Long id) {
         bookService.deleteBook(id);
     }
 
-    @GetMapping("book/author/{author}")
+    @GetMapping("/{author}")
     public ResponseEntity<List<BookResponseDto>> getBooksByAuthor(@PathVariable String author) {
         return ResponseEntity.ok(bookService.findBooksByAuthor_Name(author));
     }
 
-    @GetMapping("book/search")
+    @GetMapping("/searchByTitleAndAuthor")
     public ResponseEntity<BookResponseDto> getBookByTitleAndAuthor(
             @RequestParam String title,
             @RequestParam String author) {

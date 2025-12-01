@@ -31,7 +31,7 @@ public class BookServiceImpl implements BookService {
         Author author = authorRepository.findByName(dto.getAuthorName()).orElse(new Author(dto.getAuthorName()));
         Book book = bookMapper.toEntity(dto);
         book.setAuthor(author);
-        return bookMapper.toResponseDto(bookRepository.save(book));
+        return bookMapper.toDto(bookRepository.save(book));
     }
 
 
@@ -43,7 +43,7 @@ public class BookServiceImpl implements BookService {
     }
 
     public BookResponseDto findBookById(Long id) {
-        return bookMapper.toResponseDto(bookRepository.findById(id)
+        return bookMapper.toDto(bookRepository.findById(id)
                 .orElseThrow(() -> new BookNotFoundException("Book with ID " + id + " not found")));
     }
 
@@ -69,18 +69,18 @@ public class BookServiceImpl implements BookService {
             existingBook.setAuthor(author);
         }
 
-        return bookMapper.toResponseDto(bookRepository.save(existingBook));
+        return bookMapper.toDto(bookRepository.save(existingBook));
     }
 
     public List<BookResponseDto> findBooksByAuthor_Name(String author) {
         return bookRepository.findByAuthor_Name(author)
                 .stream()
-                .map(bookMapper::toResponseDto)
+                .map(bookMapper::toDto)
                 .collect(Collectors.toList());
     }
 
     public BookResponseDto findByTitleAndAuthor_Name(String title, String author) {
-        return bookMapper.toResponseDto(bookRepository.findByTitleAndAuthor_Name(title, author)
+        return bookMapper.toDto(bookRepository.findByTitleAndAuthor_Name(title, author)
                 .orElseThrow(() -> new BookNotFoundException(
                         "Book with title '" + title + "' and author '" + author + "' not found")));
     }
