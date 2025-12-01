@@ -1,10 +1,12 @@
 package com.example.domain;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
-@Data
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,26 +14,26 @@ public class Book {
     private String title;
     @ManyToOne(
             fetch = FetchType.LAZY,
-            cascade = {CascadeType.PERSIST, CascadeType.MERGE}
+            cascade = CascadeType.PERSIST
     )
     @JoinColumn(name = "author_id")
     private Author author;
-    private int year;
+    @Column(name = "year")
+    private int public_year;
 
     public Book() {
     }
 
-    public Book(String title, Author author, int year) {
+    public Book(String title, Author author, int public_year) {
         this.title = title;
         this.author = author;
-        this.year = year;
+        this.public_year = public_year;
     }
 
-    public Book(String title, Author author, int year, Long id) {
+    public Book(Long id, String title, Author author, int public_year) {
         this.title = title;
         this.author = author;
-        this.year = year;
+        this.public_year = public_year;
         this.id = id;
     }
-
 }

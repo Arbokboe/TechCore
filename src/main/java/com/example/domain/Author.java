@@ -2,11 +2,12 @@ package com.example.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @Entity
 public class Author {
     @Id
@@ -14,10 +15,12 @@ public class Author {
     Long id;
     @OneToMany(
             mappedBy = "author",
-            cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL
     )
+    @JsonIgnore
     private List<Book> books;
+    @Column(unique = true)
     private String name;
 
     public Author() {
