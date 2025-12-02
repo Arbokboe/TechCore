@@ -5,43 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54a9ce3a-7045-4d35-989f-eaf7a0ff6fbf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/di/jwt/JwtTokenProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/controller/NewsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/domain/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/datasource/model/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/domain/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/datasource/model/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/domain/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/datasource/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/datasource/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/dto/AuthRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/dto/AuthRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/dto/NewsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/dto/NewsResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/dto/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/dto/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/dto/bookDto/BookResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/dto/BookResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/dto/bookDto/CreateBookDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/dto/CreateBookDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/dto/errorDto/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/dto/ErrorResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/dto/errorDto/FieldError.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/dto/FieldError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/dto/errorDto/ValidationErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/dto/ValidationErrorResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/mapper/BookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/datasource/mapper/BookMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/datasource/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/repository/AuthorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/datasource/repository/AuthorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/datasource/repository/BookRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/datasource/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/securityConfig/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/di/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/AsyncService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/service/AsyncService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/service/CustomUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/ScheduledTaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/service/ScheduledTaskService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/authService/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/authService/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/service/AuthServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/bookService/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/bookService/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/service/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/newsService/NewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/service/NewsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/newsService/WebClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/service/WebClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/di/jwt/dto/jwtResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/controller/AuthController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +120,7 @@
       <workItem from="1764586177595" duration="189000" />
       <workItem from="1764586378377" duration="59000" />
       <workItem from="1764586452582" duration="8935000" />
-      <workItem from="1764665840164" duration="4727000" />
+      <workItem from="1764665840164" duration="5150000" />
     </task>
     <servers />
   </component>

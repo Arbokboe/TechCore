@@ -1,5 +1,7 @@
 package com.example.web.controller;
 
+import com.example.di.jwt.JwtTokenProvider;
+import com.example.di.jwt.dto.jwtResponse;
 import com.example.web.dto.AuthRequest;
 import com.example.web.dto.RegisterRequest;
 import com.example.web.dto.UserDto;
@@ -21,6 +23,7 @@ public class AuthController {
 
     private final AuthService authService;
     private final AuthenticationManager authenticationManager;
+    private final JwtTokenProvider jwtTokenProvider;
 
     @PostMapping("/register")
     public ResponseEntity<UserDto> register(@RequestBody RegisterRequest request) {
@@ -28,13 +31,32 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<Boolean> login(@RequestBody AuthRequest request) {
-        UsernamePasswordAuthenticationToken authToken =
+    public ResponseEntity<jwtResponse> login(@RequestBody AuthRequest request) {
+
+        Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         request.getUsername(),
                         request.getPassword()
-                );
-        Authentication authentication = authenticationManager.authenticate(authToken);
-        return ResponseEntity.ok(authentication.isAuthenticated());
+                )
+        );
+
+        String token = jwtTokenProvider.generateToken(request.getUsername());
+
+        jwtResponse response = new jwtResponse();
+        response.setToken(token);
+
+        return ResponseEntity.ok(response);
     }
+
+
+//    @PostMapping("/login")
+//    public ResponseEntity<Boolean> login(@RequestBody AuthRequest request) {
+//        UsernamePasswordAuthenticationToken authToken =
+//                new UsernamePasswordAuthenticationToken(
+//                        request.getUsername(),
+//                        request.getPassword()
+//                );
+//        Authentication authentication = authenticationManager.authenticate(authToken);
+//        return ResponseEntity.ok(authentication.isAuthenticated());
+//    }
 }
