@@ -1,12 +1,12 @@
 package com.example.service.newsService;
 
 import com.example.dto.NewsResponse;
-import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-@Data
+@RequiredArgsConstructor
 @Service
 public class NewsService {
 

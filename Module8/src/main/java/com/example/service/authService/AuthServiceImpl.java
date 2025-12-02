@@ -1,4 +1,4 @@
-package com.example.service.userService;
+package com.example.service.authService;
 
 import com.example.domain.Role;
 import com.example.domain.User;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class UserServiceImpl implements UserService {
+public class AuthServiceImpl implements AuthService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;

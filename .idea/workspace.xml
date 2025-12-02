@@ -5,19 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54a9ce3a-7045-4d35-989f-eaf7a0ff6fbf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/dto/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44a89290-f854-4366-93cb-84f87e239d07.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/44a89290-f854-4366-93cb-84f87e239d07.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44a89290-f854-4366-93cb-84f87e239d07/storage_v2/_src_/database/Books.ijLWAw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/44a89290-f854-4366-93cb-84f87e239d07/storage_v2/_src_/database/Books.ijLWAw/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/dto/AuthRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/mapper/BookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/mapper/BookMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/securityConfig/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/securityConfig/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/bookService/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/bookService/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/userService/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/userService/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/userService/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/userService/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/di/BeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/di/BeanConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/newsService/NewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/newsService/NewsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/newsService/WebClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/newsService/WebClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/userService/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/authService/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/userService/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/service/authService/AuthServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,37 +65,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build Module8.executor": "Run",
-    "Gradle.Download Sources.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.Main.executor": "Run",
-    "git-widget-placeholder": "Module8",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/konst/OneDrive/Desktop/TechCore",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build Module8.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Main.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Module8&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/konst/OneDrive/Desktop/TechCore&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -130,7 +126,8 @@
       <updated>1764586175824</updated>
       <workItem from="1764586177595" duration="189000" />
       <workItem from="1764586378377" duration="59000" />
-      <workItem from="1764586452582" duration="4689000" />
+      <workItem from="1764586452582" duration="8935000" />
+      <workItem from="1764665840164" duration="2222000" />
     </task>
     <servers />
   </component>
