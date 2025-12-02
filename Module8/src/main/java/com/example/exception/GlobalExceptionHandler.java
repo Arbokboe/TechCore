@@ -1,8 +1,8 @@
 package com.example.exception;
 
-import com.example.dto.errorDto.ErrorResponse;
-import com.example.dto.errorDto.FieldError;
-import com.example.dto.errorDto.ValidationErrorResponse;
+import com.example.web.dto.ErrorResponse;
+import com.example.web.dto.FieldError;
+import com.example.web.dto.ValidationErrorResponse;
 import com.example.exception.customException.AuthorNotFoundException;
 import com.example.exception.customException.BookNotFoundException;
 import org.springframework.http.ResponseEntity;
