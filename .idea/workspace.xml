@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54a9ce3a-7045-4d35-989f-eaf7a0ff6fbf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/di/jwt/JwtTokenFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/di/jwt/JwtTokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/di/jwt/JwtTokenProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/di/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/di/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/di/jwt/dto/jwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/di/jwt/dto/jwtResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module8/src/main/java/com/example/web/controller/AuthController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +128,7 @@
       <workItem from="1764586177595" duration="189000" />
       <workItem from="1764586378377" duration="59000" />
       <workItem from="1764586452582" duration="8935000" />
-      <workItem from="1764665840164" duration="6305000" />
+      <workItem from="1764665840164" duration="7142000" />
     </task>
     <servers />
   </component>

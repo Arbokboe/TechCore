@@ -9,8 +9,6 @@ import com.example.web.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,31 +30,7 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<jwtResponse> login(@RequestBody AuthRequest request) {
-
-        Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(
-                        request.getUsername(),
-                        request.getPassword()
-                )
-        );
-
         String token = jwtTokenProvider.generateToken(request.getUsername());
-
-        jwtResponse response = new jwtResponse();
-        response.setToken(token);
-
-        return ResponseEntity.ok(response);
+        return ResponseEntity.ok(new jwtResponse(token));
     }
-
-
-//    @PostMapping("/login")
-//    public ResponseEntity<Boolean> login(@RequestBody AuthRequest request) {
-//        UsernamePasswordAuthenticationToken authToken =
-//                new UsernamePasswordAuthenticationToken(
-//                        request.getUsername(),
-//                        request.getPassword()
-//                );
-//        Authentication authentication = authenticationManager.authenticate(authToken);
-//        return ResponseEntity.ok(authentication.isAuthenticated());
-//    }
 }
