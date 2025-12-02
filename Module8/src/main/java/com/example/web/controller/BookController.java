@@ -12,6 +12,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -34,6 +35,7 @@ public class BookController {
     }
 
     @GetMapping("/all")
+    @PreAuthorize("hasRole('USER')")
     public List<BookResponseDto> getAllBooks() {
         return bookService.getAllBooks()
                 .stream()
@@ -53,11 +55,12 @@ public class BookController {
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     public void deleteBook(@PathVariable Long id) {
         bookService.deleteBook(id);
     }
 
-    @GetMapping("/{author}")
+    @GetMapping("/author/{author}")
     public ResponseEntity<List<BookResponseDto>> getBooksByAuthor(@PathVariable String author) {
         return ResponseEntity.ok(bookService.findBooksByAuthor_Name(author));
     }
