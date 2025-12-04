@@ -55,4 +55,11 @@ class BookServiceTest {
         verify(bookRepository, times(1)).findById(1L);
         verify(bookMapper, times(1)).toDto(book);
     }
+
+
+    @Test
+    void testDeleteById() {
+        bookRepository.deleteById(1L);
+        verify(bookRepository, times(1)).deleteById(1L);
+    }
 }
