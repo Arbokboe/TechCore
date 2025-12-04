@@ -2,13 +2,12 @@ package com.example.service.bookService;
 
 import com.example.datasource.mapper.BookMapper;
 import com.example.datasource.model.Book;
-import com.example.datasource.repository.AuthorRepository;
 import com.example.datasource.repository.BookRepository;
 import com.example.web.dto.BookResponseDto;
 import com.example.web.service.BookServiceImpl;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
@@ -27,17 +26,11 @@ class BookServiceTest {
     private BookRepository bookRepository;
 
     @Mock
-    private AuthorRepository authorRepository;
-
-    @Mock
     private BookMapper bookMapper;
 
+    @InjectMocks
     private BookServiceImpl bookService;
 
-    @BeforeEach
-    void setUp() {
-        bookService = new BookServiceImpl(bookRepository, authorRepository, bookMapper);
-    }
 
     @Test
     void testFindById() {
