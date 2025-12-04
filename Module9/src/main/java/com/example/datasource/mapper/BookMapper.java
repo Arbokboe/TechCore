@@ -18,4 +18,6 @@ public interface BookMapper {
 
     @Mapping(target = "authorName", source = "author.name")
     BookResponseDto toDto(Book book);
+
+
 }
