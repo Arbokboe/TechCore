@@ -1,4 +1,4 @@
-package com.example.testClassCalc;
+package com.example.calcTest;
 
 public class Calculator {
 

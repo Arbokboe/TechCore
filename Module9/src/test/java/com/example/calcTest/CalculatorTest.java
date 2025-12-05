@@ -1,4 +1,4 @@
-package com.example.testClassCalc;
+package com.example.calcTest;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

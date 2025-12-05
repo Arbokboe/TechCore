@@ -18,5 +18,5 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     List<Book> findAllWithAuthors();
 
     @Query("SELECT b FROM Book b JOIN FETCH b.author WHERE LOWER(b.title) LIKE LOWER(CONCAT('%', :searchText, '%')) ORDER BY b.public_year DESC")
-    List<Book> findByTitleContainingIgnoreCaseOrderByPublic_yearDesc(@Param("searchText") String searchText);
+    List<Book> findByPartTitle(@Param("searchText") String searchText);
 }

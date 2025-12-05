@@ -86,7 +86,7 @@ public class BookServiceImpl implements BookService {
     }
 
     public List<BookResponseDto> searchBooksByTitle(String searchText) {
-        List<Book> books = bookRepository.findByTitleContainingIgnoreCaseOrderByPublic_yearDesc(searchText);
+        List<Book> books = bookRepository.findByPartTitle(searchText);
         return books.stream()
                 .map(BookResponseDto::new)
                 .collect(Collectors.toList());

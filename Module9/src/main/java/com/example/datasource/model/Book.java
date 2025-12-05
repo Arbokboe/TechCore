@@ -18,7 +18,7 @@ public class Book {
     )
     @JoinColumn(name = "author_id")
     private Author author;
-    @Column(name = "year")
+
     private int public_year;
 
     public Book() {
