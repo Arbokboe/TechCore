@@ -75,7 +75,7 @@ public class BookControllerTest {
         CreateBookDto createBookDto = new CreateBookDto();
         createBookDto.setTitle("New Book");
         createBookDto.setAuthorName("New Author");
-        createBookDto.setPublic_year(2024);
+        createBookDto.setPublicYear(2024);
 
         BookResponseDto responseDto = new BookResponseDto("New Book", 2024, "New Author");
 
@@ -97,7 +97,7 @@ public class BookControllerTest {
         CreateBookDto Dto = new CreateBookDto();
         Dto.setTitle("");
         Dto.setAuthorName("Author");
-        Dto.setPublic_year(2024);
+        Dto.setPublicYear(2024);
 
         mockMvc.perform(post("/api/book/new")
                         .contentType(MediaType.APPLICATION_JSON)

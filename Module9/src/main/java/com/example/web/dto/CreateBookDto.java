@@ -18,8 +18,15 @@ public class CreateBookDto {
     @NotBlank
     private String authorName;
     @Min(1900)
-    private int public_year;
+    private int publicYear;
 
     public CreateBookDto() {
     }
 }
+
+
+//        {
+//        "title":"new book",
+//        "authorName":"author",
+//        "publicYear":"2025"
+//        }

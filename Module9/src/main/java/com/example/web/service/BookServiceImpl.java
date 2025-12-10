@@ -9,6 +9,7 @@ import com.example.exception.customException.BookNotFoundException;
 import com.example.datasource.mapper.BookMapper;
 import com.example.datasource.repository.AuthorRepository;
 import com.example.datasource.repository.BookRepository;
+import com.example.web.notificationClient.NotificationClient;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -26,12 +27,15 @@ public class BookServiceImpl implements BookService {
     private final BookRepository bookRepository;
     private final AuthorRepository authorRepository;
     private final BookMapper bookMapper;
+    private final NotificationClient notificationClient;
 
     public BookResponseDto saveBook(CreateBookDto dto) {
         Author author = authorRepository.findByName(dto.getAuthorName()).orElse(new Author(dto.getAuthorName()));
         Book book = bookMapper.toEntity(dto);
         book.setAuthor(author);
-        return bookMapper.toDto(bookRepository.save(book));
+        BookResponseDto dtoResponse = bookMapper.toDto(bookRepository.save(book));
+        notificationClient.sendNotification("New book create request");
+        return dtoResponse;
     }
 
 
@@ -61,7 +65,7 @@ public class BookServiceImpl implements BookService {
                 .orElseThrow(() -> new BookNotFoundException("Book with ID " + id + " not found"));
 
         existingBook.setTitle(updateBookDto.getTitle());
-        existingBook.setPublic_year(updateBookDto.getPublic_year());
+        existingBook.setPublicYear(updateBookDto.getPublicYear());
 
         if (updateBookDto.getAuthorName() != null && !updateBookDto.getAuthorName().isBlank()) {
             Author author = authorRepository.findByName(updateBookDto.getAuthorName())

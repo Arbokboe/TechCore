@@ -13,7 +13,7 @@ public interface BookMapper {
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "author", ignore = true)
     @Mapping(target = "title", source = "title")
-    @Mapping(target = "public_year", source = "public_year")
+    @Mapping(target = "publicYear", source = "publicYear")
     Book toEntity(CreateBookDto dto);
 
     @Mapping(target = "authorName", source = "author.name")

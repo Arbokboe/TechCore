@@ -19,21 +19,21 @@ public class Book {
     @JoinColumn(name = "author_id")
     private Author author;
 
-    private int public_year;
+    private int publicYear;
 
     public Book() {
     }
 
-    public Book(String title, Author author, int public_year) {
+    public Book(String title, Author author, int publicYear) {
         this.title = title;
         this.author = author;
-        this.public_year = public_year;
+        this.publicYear = publicYear;
     }
 
-    public Book(Long id, String title, Author author, int public_year) {
+    public Book(Long id, String title, Author author, int publicYear) {
         this.title = title;
         this.author = author;
-        this.public_year = public_year;
+        this.publicYear = publicYear;
         this.id = id;
     }
 }
