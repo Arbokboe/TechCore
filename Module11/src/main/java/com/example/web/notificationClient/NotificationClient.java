@@ -24,7 +24,7 @@ public class NotificationClient {
 
 
     public void sendNotification(String message) {
-        String url = notificationServiceUrl + "/notify";
+        String url = notificationServiceUrl + "api/notifications/notify";
         Map<String, String> request = Map.of("message", message);
 
         ResponseEntity<String> response = restTemplate.postForEntity(

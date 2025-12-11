@@ -23,7 +23,6 @@ import java.util.stream.Collectors;
 @Service
 public class BookServiceImpl implements BookService {
 
-
     private final BookRepository bookRepository;
     private final AuthorRepository authorRepository;
     private final BookMapper bookMapper;
@@ -33,9 +32,7 @@ public class BookServiceImpl implements BookService {
         Author author = authorRepository.findByName(dto.getAuthorName()).orElse(new Author(dto.getAuthorName()));
         Book book = bookMapper.toEntity(dto);
         book.setAuthor(author);
-        BookResponseDto dtoResponse = bookMapper.toDto(bookRepository.save(book));
-        notificationClient.sendNotification("New book create request");
-        return dtoResponse;
+        return bookMapper.toDto(bookRepository.save(book));
     }
 
 
