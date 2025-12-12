@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04600b45-5942-48ad-bd78-ecb6dc446968" name="Changes" comment="eureka project files">
-      <change beforePath="$PROJECT_DIR$/Module11/NotificationService/src/main/java/com/example/NotificationService/web/controller/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module11/NotificationService/src/main/java/com/example/NotificationService/web/controller/NotificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module11/src/main/java/com/example/web/notificationClient/NotificationClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module11/src/main/java/com/example/web/notificationClient/NotificationClient.java" afterDir="false" />
+    <list default="true" id="04600b45-5942-48ad-bd78-ecb6dc446968" name="Changes" comment="DiscoveryClient">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module11/src/main/java/com/example/di/BeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module11/src/main/java/com/example/di/BeanConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module11/src/main/java/com/example/web/notificationClient/NotificationClient.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Module11/src/main/java/com/example/web/service/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module11/src/main/java/com/example/web/service/AuthServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module11/src/main/java/com/example/web/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module11/src/main/java/com/example/web/service/BookService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module11/src/main/java/com/example/web/service/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module11/src/main/java/com/example/web/service/BookServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +45,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$/Module11" gradleHome="C:\Users\konst\.gradle\wrapper\dists\gradle-9.2.1-bin\2t0n5ozlw9xmuyvbp7dnzaxug\gradle-9.2.1" javaHome="C:\Users\konst\.jdks\ms-17.0.15" gradleVersion="9.2.1" />
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 1
@@ -56,33 +61,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build Module11.executor": "Run",
-    "Gradle.Download Sources.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.Main.executor": "Run",
-    "git-widget-placeholder": "Module11",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2816092",
-    "settings.editor.selected.configurable": "easyapi.settings.EasyApiConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build Module11.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Main.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Module11&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2816092&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;easyapi.settings.EasyApiConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="com.example.TechCore.main" />
@@ -109,6 +114,8 @@
       <updated>1765399902470</updated>
       <workItem from="1765399903862" duration="5552000" />
       <workItem from="1765446472136" duration="19646000" />
+      <workItem from="1765488933818" duration="175000" />
+      <workItem from="1765523972020" duration="5812000" />
     </task>
     <task id="LOCAL-00001" summary="Создание Eureka Server">
       <option name="closed" value="true" />
@@ -134,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765480303748</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="DiscoveryClient">
+      <option name="closed" value="true" />
+      <created>1765488964517</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1765488964517</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +170,7 @@
     <MESSAGE value="Создание Eureka Server" />
     <MESSAGE value="eureka для сервисов book и notification + docker-compose" />
     <MESSAGE value="eureka project files" />
-    <option name="LAST_COMMIT_MESSAGE" value="eureka project files" />
+    <MESSAGE value="DiscoveryClient" />
+    <option name="LAST_COMMIT_MESSAGE" value="DiscoveryClient" />
   </component>
 </project>

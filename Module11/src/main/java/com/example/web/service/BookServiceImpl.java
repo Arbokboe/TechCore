@@ -9,7 +9,6 @@ import com.example.exception.customException.BookNotFoundException;
 import com.example.datasource.mapper.BookMapper;
 import com.example.datasource.repository.AuthorRepository;
 import com.example.datasource.repository.BookRepository;
-import com.example.web.notificationClient.NotificationClient;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -26,7 +25,6 @@ public class BookServiceImpl implements BookService {
     private final BookRepository bookRepository;
     private final AuthorRepository authorRepository;
     private final BookMapper bookMapper;
-    private final NotificationClient notificationClient;
 
     public BookResponseDto saveBook(CreateBookDto dto) {
         Author author = authorRepository.findByName(dto.getAuthorName()).orElse(new Author(dto.getAuthorName()));
