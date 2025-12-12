@@ -65,4 +65,19 @@ public class AuthServiceImpl implements AuthService {
                 String.class
         );
     }
+
+    public void startTest() {
+
+        for (int i = 1; i <= 10; i++) {
+            try {
+                String response = restTemplate.getForObject(
+                        "http://NOTIFICATION-SERVICE/api/notifications/info",
+                        String.class
+                );
+                System.out.println("Запрос " + i + ": " + response);
+            } catch (Exception e) {
+                System.out.println("Запрос " + i + ": Ошибка - " + e.getMessage());
+            }
+        }
+    }
 }

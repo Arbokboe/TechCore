@@ -10,4 +10,6 @@ public interface AuthService {
     UserDto register(RegisterRequest request);
 
     JwtResponse login(AuthRequest request);
+
+     void startTest();
 }

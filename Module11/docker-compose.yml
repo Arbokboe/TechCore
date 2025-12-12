@@ -43,10 +43,6 @@ services:
   # Сервис уведомлений
   notification-service:
     build: ./NotificationService
-    container_name: notification-service
-    hostname: notification-service
-    ports:
-      - "8081:8081"
     depends_on:
       - eureka-server
     networks:
