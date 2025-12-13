@@ -1,6 +1,5 @@
 package com.example.NotificationService.web.controller;
 
-import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -20,8 +19,8 @@ public class NotificationController {
     }
 
     @GetMapping("/info")
-    public ResponseEntity<String> test(HttpServletRequest request) {
-        logger.info(((Integer) request.getLocalPort()).toString());
-        return ResponseEntity.ok("OK");
+    public ResponseEntity<String> test(@RequestParam String message) {
+        logger.info(message);
+        return ResponseEntity.ok(message);
     }
 }

@@ -11,5 +11,5 @@ public interface AuthService {
 
     JwtResponse login(AuthRequest request);
 
-     void startTest();
+     void startTest(String message);
 }

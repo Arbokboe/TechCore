@@ -9,17 +9,18 @@ import com.example.web.dto.RegisterRequest;
 import com.example.web.dto.UserDto;
 import com.example.datasource.mapper.UserMapper;
 import com.example.datasource.repository.UserRepository;
+import com.example.web.feignClient.NotificationClient;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
-import org.springframework.web.util.UriComponentsBuilder;
 
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class AuthServiceImpl implements AuthService {
@@ -29,7 +30,7 @@ public class AuthServiceImpl implements AuthService {
     private final UserMapper userMapper;
     private final JwtTokenProvider jwtTokenProvider;
     private final AuthenticationManager authenticationManager;
-    private final RestTemplate restTemplate;
+    private final NotificationClient notificationClient;
 
     public UserDto register(RegisterRequest request) {
         User user = userMapper.toEntity(request);
@@ -51,30 +52,15 @@ public class AuthServiceImpl implements AuthService {
     }
 
     public ResponseEntity<String> callNotificationService(String message) {
-        String url = UriComponentsBuilder
-                .fromUriString("http://NOTIFICATION-SERVICE/api/notifications/notify")
-                .queryParam("message", message)
-                .build()
-                .toUriString();
-
-        System.out.println("Url request: " + url);
-
-        return restTemplate.postForEntity(
-                url,
-                null,
-                String.class
-        );
+        notificationClient.sendNotification(message);
+        return ResponseEntity.ok().body(message);
     }
 
-    public void startTest() {
-
+    public void startTest(String message) {
         for (int i = 1; i <= 10; i++) {
             try {
-                String response = restTemplate.getForObject(
-                        "http://NOTIFICATION-SERVICE/api/notifications/info",
-                        String.class
-                );
-                System.out.println("Запрос " + i + ": " + response);
+                notificationClient.test(message);
+                System.out.println("Запрос " + i);
             } catch (Exception e) {
                 System.out.println("Запрос " + i + ": Ошибка - " + e.getMessage());
             }

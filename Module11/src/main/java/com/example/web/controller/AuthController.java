@@ -27,8 +27,8 @@ public class AuthController {
     }
 
     @GetMapping("/loadBalancedTest")
-    public void test() {
-        authService.startTest();
+    public void test(@RequestParam String message) {
+        authService.startTest(message);
     }
 
 }
