@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="04600b45-5942-48ad-bd78-ecb6dc446968" name="Changes" comment="OpenFeign как альтернатива RestTemplate">
+      <change afterPath="$PROJECT_DIR$/Module11/Eureka-server/src/main/resources/application-peer1.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module11/Eureka-server/src/main/resources/application-peer2.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module11/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module11/Api Gateway.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module11/Eureka-server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Module11/Eureka-server/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module11/Eureka-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Module11/Eureka-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module11/NotificationService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Module11/NotificationService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module11/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Module11/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module11/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Module11/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module11/Диаграмма.png" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/Module11">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$/Module11" gradleHome="C:\Users\konst\.gradle\wrapper\dists\gradle-9.2.1-bin\2t0n5ozlw9xmuyvbp7dnzaxug\gradle-9.2.1" javaHome="C:\Users\konst\.jdks\ms-17.0.15" gradleVersion="9.2.1" />
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="36fa66h5ttctnlHbIxXG144xTyB" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build Module11.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.Main.executor": "Run",
+    "git-widget-placeholder": "Module11",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2816092",
+    "settings.editor.selected.configurable": "easyapi.settings.EasyApiConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="com.example.TechCore.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28238.7" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04600b45-5942-48ad-bd78-ecb6dc446968" name="Changes" comment="" />
+      <created>1765399902470</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1765399902470</updated>
+      <workItem from="1765399903862" duration="5552000" />
+      <workItem from="1765446472136" duration="19646000" />
+      <workItem from="1765488933818" duration="175000" />
+      <workItem from="1765523972020" duration="7660000" />
+      <workItem from="1765566648815" duration="4812000" />
+      <workItem from="1765572922447" duration="1454000" />
+      <workItem from="1765617394016" duration="3255000" />
+      <workItem from="1765633675668" duration="755000" />
+      <workItem from="1765704817494" duration="16000" />
+      <workItem from="1765787171187" duration="7021000" />
+    </task>
+    <task id="LOCAL-00001" summary="Создание Eureka Server">
+      <option name="closed" value="true" />
+      <created>1765401415790</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1765401415790</updated>
+    </task>
+    <task id="LOCAL-00002" summary="eureka для сервисов book и notification + docker-compose">
+      <option name="closed" value="true" />
+      <created>1765480266099</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1765480266099</updated>
+    </task>
+    <task id="LOCAL-00003" summary="eureka project files">
+      <option name="closed" value="true" />
+      <created>1765480303748</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1765480303748</updated>
+    </task>
+    <task id="LOCAL-00004" summary="DiscoveryClient">
+      <option name="closed" value="true" />
+      <created>1765488964517</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1765488964517</updated>
+    </task>
+    <task id="LOCAL-00005" summary="RestTemplate с @LoadBalanced">
+      <option name="closed" value="true" />
+      <created>1765541769261</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1765541769261</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Клиентская балансировка">
+      <option name="closed" value="true" />
+      <created>1765572336705</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1765572336705</updated>
+    </task>
+    <task id="LOCAL-00007" summary="OpenFeign как альтернатива RestTemplate">
+      <option name="closed" value="true" />
+      <created>1765618713520</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1765618713520</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Создание Eureka Server" />
+    <MESSAGE value="eureka для сервисов book и notification + docker-compose" />
+    <MESSAGE value="eureka project files" />
+    <MESSAGE value="DiscoveryClient" />
+    <MESSAGE value="RestTemplate с @LoadBalanced" />
+    <MESSAGE value="Клиентская балансировка" />
+    <MESSAGE value="OpenFeign как альтернатива RestTemplate" />
+    <option name="LAST_COMMIT_MESSAGE" value="OpenFeign как альтернатива RestTemplate" />
+  </component>
+</project>

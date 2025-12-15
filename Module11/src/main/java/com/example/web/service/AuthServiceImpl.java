@@ -1,0 +1,69 @@
+package com.example.web.service;
+
+import com.example.datasource.model.Role;
+import com.example.datasource.model.User;
+import com.example.di.jwt.JwtTokenProvider;
+import com.example.di.jwt.dto.JwtResponse;
+import com.example.web.dto.AuthRequest;
+import com.example.web.dto.RegisterRequest;
+import com.example.web.dto.UserDto;
+import com.example.datasource.mapper.UserMapper;
+import com.example.datasource.repository.UserRepository;
+import com.example.web.feignClient.NotificationClient;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+
+
+@Slf4j
+@Service
+@RequiredArgsConstructor
+public class AuthServiceImpl implements AuthService {
+
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
+    private final UserMapper userMapper;
+    private final JwtTokenProvider jwtTokenProvider;
+    private final AuthenticationManager authenticationManager;
+    private final NotificationClient notificationClient;
+
+    public UserDto register(RegisterRequest request) {
+        User user = userMapper.toEntity(request);
+        String encodedPassword = passwordEncoder.encode(user.getPassword());
+        user.setPassword(encodedPassword);
+        user.setRole(Role.USER);
+        ResponseEntity<String> response = callNotificationService("New register request from user: " + user.getUsername());
+        return userMapper.toDto(userRepository.save(user));
+    }
+
+    public JwtResponse login(AuthRequest request) {
+        Authentication authentication = authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(
+                        request.getUsername(),
+                        request.getPassword()
+                )
+        );
+        return new JwtResponse(jwtTokenProvider.generateToken(request.getUsername()));
+    }
+
+    public ResponseEntity<String> callNotificationService(String message) {
+        notificationClient.sendNotification(message);
+        return ResponseEntity.ok().body(message);
+    }
+
+    public void startTest(String message) {
+        for (int i = 1; i <= 10; i++) {
+            try {
+                notificationClient.test(message);
+                System.out.println("Запрос " + i);
+            } catch (Exception e) {
+                System.out.println("Запрос " + i + ": Ошибка - " + e.getMessage());
+            }
+        }
+    }
+}
