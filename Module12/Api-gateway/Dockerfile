@@ -5,5 +5,5 @@ RUN gradle build --no-daemon -x test
 
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
-COPY --from=build /app/build/libs/*.jar app.jar
-ENTRYPOINT ["java", "-jar", "app.jar"]
+COPY --from=build /app/build/libs/*.jar api-gateway.jar
+ENTRYPOINT ["java", "-jar", "api-gateway.jar"]

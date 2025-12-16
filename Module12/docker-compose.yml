@@ -24,11 +24,9 @@ services:
       - app-network
 
   # Book-service
-  app:
+  book-service:
     build: .
-    container_name: main-app
-    ports:
-      - "8080:8080"
+    container_name: book-service
     environment:
       - SPRING_PROFILES_ACTIVE=prod
     depends_on:
@@ -56,7 +54,7 @@ services:
 
   # Notification-service
   notification-service:
-    build: ./NotificationService
+    build: ./Notification-service
     environment:
       - EUREKA_CLIENT_SERVICE_URL_DEFAULT_ZONE=http://eureka-server-1:8761/eureka/,http://eureka-server-2:8762/eureka/
     depends_on:
@@ -65,6 +63,16 @@ services:
     networks:
       - app-network
 
+  # Api-gateway
+  api-gateway:
+    build: ./Api-gateway
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+    environment:
+      - eureka-server-1
+      - eureka-server-2
 networks:
   app-network:
     driver: bridge
