@@ -23,10 +23,3 @@ public class CreateBookDto {
     public CreateBookDto() {
     }
 }
-
-
-//        {
-//        "title":"new book",
-//        "authorName":"author",
-//        "publicYear":"2025"
-//        }

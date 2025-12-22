@@ -5,7 +5,6 @@ import com.example.web.dto.BookResponseDto;
 import com.example.web.dto.CreateBookDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
@@ -28,6 +27,4 @@ public interface BookService {
     BookResponseDto findByTitleAndAuthor_Name(String title, String author);
 
     List<BookResponseDto> searchBooksByTitle(String searchText);
-
-    Book createBookWithAuthorAndRollback(CreateBookDto dto);
 }

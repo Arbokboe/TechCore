@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/TechCore.iml" filepath="$PROJECT_DIR$/.idea/TechCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.TechCore.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.TechCore.main.iml" />
     </modules>
   </component>
 </project>

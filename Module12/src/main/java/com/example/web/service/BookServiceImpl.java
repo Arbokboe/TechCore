@@ -9,7 +9,6 @@ import com.example.exception.customException.BookNotFoundException;
 import com.example.datasource.mapper.BookMapper;
 import com.example.datasource.repository.AuthorRepository;
 import com.example.datasource.repository.BookRepository;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -90,20 +89,4 @@ public class BookServiceImpl implements BookService {
                 .map(BookResponseDto::new)
                 .collect(Collectors.toList());
     }
-
-
-    @Transactional
-    public Book createBookWithAuthorAndRollback(CreateBookDto dto) {
-        Author author = new Author();
-        author.setName(dto.getAuthorName());
-        Author savedAuthor = authorRepository.save(author);
-        throw new RuntimeException("Искусственная ошибка для демонстрации отката транзакции");
-
-//         Book book = new Book();
-//         book.setTitle(dto.getTitle());
-//         book.setYear(dto.getYear());
-//         book.setAuthor(savedAuthor);
-//         return bookRepository.save(book);
-    }
-
 }

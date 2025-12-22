@@ -13,6 +13,6 @@ public class HealthController {
 
     @GetMapping("/info")
     public String info() {
-        return "BookService - Service Discovery Demo";
+        return "BookService";
     }
 }
