@@ -60,8 +60,6 @@ public class JwtTokenProvider {
                 .getPayload();
     }
 
-
-
     public String getUserIdFromToken(String token) {
         return getClaims(token).get("userId", String.class);
     }
