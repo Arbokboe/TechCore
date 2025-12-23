@@ -1,0 +1,103 @@
+services:
+  # Eureka Server 1
+  eureka-server-1:
+    build: ./Eureka-server
+    container_name: eureka-server-1
+    hostname: eureka-server-1
+    ports:
+      - "8761:8761"
+    environment:
+      - SPRING_PROFILES_ACTIVE=peer1
+    networks:
+      - app-network
+
+  # Eureka Server 2
+  eureka-server-2:
+    build: ./Eureka-server
+    container_name: eureka-server-2
+    hostname: eureka-server-2
+    ports:
+      - "8762:8762"
+    environment:
+      - SPRING_PROFILES_ACTIVE=peer2
+    networks:
+      - app-network
+
+  # Book-service
+  book-service:
+    build: .
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    depends_on:
+      - eureka-server-1
+      - eureka-server-2
+      - book-db
+      - notification-service
+    networks:
+      - app-network
+
+  # Books db
+  book-db:
+    image: postgres:14-alpine
+    container_name: book-db
+    environment:
+      - POSTGRES_DB=Books
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5434:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+  # User db
+  user-db:
+    image: postgres:14-alpine
+    container_name: user-db
+    environment:
+      - POSTGRES_DB=User
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5433:5432"
+    networks:
+      - app-network
+
+  # Notification-service
+  notification-service:
+    build: ./Notification-service
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    depends_on:
+      - eureka-server-1
+      - eureka-server-2
+    networks:
+      - app-network
+
+  # User-service
+  user-service:
+    build: ./User-service
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    depends_on:
+      - user-db
+      - eureka-server-1
+      - eureka-server-2
+    networks:
+      - app-network
+
+  # Api-gateway
+  api-gateway:
+    build: ./Api-gateway
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - eureka-server-1
+      - eureka-server-2
+networks:
+  app-network:
+    driver: bridge
