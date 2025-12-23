@@ -21,12 +21,6 @@ public class JwtTokenFilter implements GatewayFilter {
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 
         String token = jwtTokenProvider.resolveToken(exchange.getRequest());
-        String path = exchange.getRequest().getPath().value();
-
-        if (path.startsWith("/api/auth/")) {
-            log.debug("Skipping JWT check for auth endpoint");
-            return chain.filter(exchange);
-        }
         // Можно сделать в проде Service to Service аутентификацию
         // String serviceToken = jwtTokenProvider.generateServiceToken();
 
