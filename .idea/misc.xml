@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/Module12" />
+    <file type="web" url="file://$PROJECT_DIR$/Module13" />
   </component>
+  <component name="KubernetesApiProvider"><![CDATA[{}]]></component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
