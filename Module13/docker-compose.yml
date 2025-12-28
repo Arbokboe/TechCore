@@ -98,6 +98,14 @@ services:
       - SPRING_PROFILES_ACTIVE=prod
       - eureka-server-1
       - eureka-server-2
+
+  config-server:
+    build: ./Config-server
+    ports:
+      - "8888:8888"
+    networks:
+      - app-network
+
 networks:
   app-network:
     driver: bridge

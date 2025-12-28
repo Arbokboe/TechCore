@@ -42,6 +42,9 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
     implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
     implementation("org.springframework.boot:spring-boot-starter-validation")
+    implementation("org.springframework.cloud:spring-cloud-starter-config")
+    implementation("org.springframework.cloud:spring-cloud-starter-bootstrap")
+    implementation ("org.springframework.boot:spring-boot-starter-actuator")
 
 
     annotationProcessor("org.mapstruct:mapstruct-processor:1.5.5.Final")

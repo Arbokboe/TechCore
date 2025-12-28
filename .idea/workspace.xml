@@ -4,124 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bb6fb82-ca2e-4998-9878-30d34c892a20" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Module13/Notification-service/src/main/resources/bootstrap.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module13/src/main/resources/bootstrap.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Api-gateway/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Api-gateway/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Api-gateway/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Api-gateway/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Api-gateway/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Api-gateway/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Api-gateway/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Api-gateway/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Api-gateway/settings.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Api-gateway/src/main/java/org/example/apigateway/ApiGatewayApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Api-gateway/src/main/java/org/example/apigateway/filter/JwtTokenFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Api-gateway/src/main/java/org/example/apigateway/filter/LogFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Api-gateway/src/main/java/org/example/apigateway/filter/RateLimiterFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Api-gateway/src/main/java/org/example/apigateway/security/GatewayConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Api-gateway/src/main/java/org/example/apigateway/security/JwtTokenProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Api-gateway/src/main/resources/application-dev.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Api-gateway/src/main/resources/application-prod.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Api-gateway/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Api-gateway/src/test/java/org/example/apigateway/ApiGatewayApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Eureka-server/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Eureka-server/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Eureka-server/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Eureka-server/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Eureka-server/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Eureka-server/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Eureka-server/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Eureka-server/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Eureka-server/settings.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Eureka-server/src/main/java/com/example/EurekaServer/EurekaServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Eureka-server/src/main/resources/application-peer1.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Eureka-server/src/main/resources/application-peer2.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Eureka-server/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Eureka-server/src/test/java/com/example/EurekaServer/ServiceDiscoveryApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Notification-service/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Notification-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Notification-service/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Notification-service/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Notification-service/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Notification-service/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Notification-service/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Notification-service/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Notification-service/settings.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Notification-service/src/main/java/com/example/NotificationService/NotificationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Notification-service/src/main/java/com/example/NotificationService/web/controller/NotificationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Notification-service/src/main/java/com/example/NotificationService/web/service/NotificationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Notification-service/src/main/java/com/example/NotificationService/web/service/NotificationServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Notification-service/src/main/resources/application-dev.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Notification-service/src/main/resources/application-prod.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Notification-service/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/db.migration/V1__.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/java/com/example/user_service/datasource/mapper/UserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/java/com/example/user_service/datasource/model/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/java/com/example/user_service/datasource/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/java/com/example/user_service/datasource/repository/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/java/com/example/user_service/di/BeanConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/java/com/example/user_service/exception/BadCredentials.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/java/com/example/user_service/exception/GlobalExceptionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/java/com/example/user_service/exception/UserNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/java/com/example/user_service/jwt/JwtGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/java/com/example/user_service/web/controller/AuthController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/java/com/example/user_service/web/dto/AuthRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/java/com/example/user_service/web/dto/ErrorResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/java/com/example/user_service/web/dto/FieldError.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/java/com/example/user_service/web/dto/JwtResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/java/com/example/user_service/web/dto/RegisterRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/java/com/example/user_service/web/dto/UserDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/java/com/example/user_service/web/dto/ValidationErrorResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/java/com/example/user_service/web/service/AuthService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/java/com/example/user_service/web/service/AuthServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/resources/application-dev.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/User-service/src/main/resources/application-prod.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/settings.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/java/com/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/java/com/example/datasource/mapper/BookMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/java/com/example/datasource/model/Author.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/java/com/example/datasource/model/Book.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/java/com/example/datasource/repository/AuthorRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/java/com/example/datasource/repository/BookRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/java/com/example/di/BeanConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/java/com/example/exception/GlobalExceptionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/java/com/example/exception/customException/AuthorNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/java/com/example/exception/customException/BookNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/java/com/example/web/controller/BookController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/java/com/example/web/controller/HealthController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/java/com/example/web/dto/BookResponseDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/java/com/example/web/dto/CreateBookDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/java/com/example/web/dto/ErrorResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/java/com/example/web/dto/FieldError.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/java/com/example/web/dto/ValidationErrorResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/java/com/example/web/feignClient/NotificationClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/java/com/example/web/service/BookService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/java/com/example/web/service/BookServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/java/com/example/web/service/ScheduledTaskService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/resources/application-dev.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/resources/application-prod.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/test/java/com/example/repository/BookRepositoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/test/java/com/example/service/bookService/BookServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/src/test/java/com/example/web/EndToEndTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module12/Обновленная диаграмма.png" beforeDir="false" />
+    <list default="true" id="0bb6fb82-ca2e-4998-9878-30d34c892a20" name="Changes" comment="init commit">
+      <change afterPath="$PROJECT_DIR$/Module13/Config-server/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module13/Notification-service/src/main/resources/application-dev.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module13/Notification-service/src/main/resources/application-prod.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module13/Notification-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Module13/Notification-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module13/Notification-service/src/main/resources/bootstrap.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module13/User-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/Module13/User-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module13/User-service/src/main/java/com/example/user_service/jwt/JwtGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module13/User-service/src/main/java/com/example/user_service/jwt/JwtGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module13/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/Module13/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module13/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Module13/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module13/src/main/resources/application-dev.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module13/src/main/resources/application-prod.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module13/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Module13/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module13/src/main/resources/bootstrap.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,11 +111,25 @@
       <workItem from="1766493369394" duration="61000" />
       <workItem from="1766564673096" duration="141000" />
       <workItem from="1766681014675" duration="3279000" />
-      <workItem from="1766741186847" duration="1264000" />
+      <workItem from="1766741186847" duration="6993000" />
+      <workItem from="1766783321175" duration="3503000" />
     </task>
+    <task id="LOCAL-00001" summary="init commit">
+      <option name="closed" value="true" />
+      <created>1766743890496</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1766743890496</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="init commit" />
   </component>
 </project>
