@@ -1,4 +1,15 @@
 services:
+  config-server:
+    build: ./Config-server
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    depends_on:
+      - eureka-server-1
+      - eureka-server-2
+    ports:
+      - "8888:8888"
+    networks:
+      - app-network
   # Eureka Server 1
   eureka-server-1:
     build: ./Eureka-server
@@ -33,6 +44,7 @@ services:
       - eureka-server-2
       - book-db
       - notification-service
+      - config-server
     networks:
       - app-network
 
@@ -72,6 +84,7 @@ services:
     depends_on:
       - eureka-server-1
       - eureka-server-2
+      - config-server
     networks:
       - app-network
 
@@ -98,13 +111,6 @@ services:
       - SPRING_PROFILES_ACTIVE=prod
       - eureka-server-1
       - eureka-server-2
-
-  config-server:
-    build: ./Config-server
-    ports:
-      - "8888:8888"
-    networks:
-      - app-network
 
 networks:
   app-network:
